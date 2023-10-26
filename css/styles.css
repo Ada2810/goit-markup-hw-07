@@ -116,6 +116,7 @@ header {
   background-color: white;
   width: 480px;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .is-open {
