@@ -136,6 +136,7 @@ header {
   border: none;
   background: none;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .mobile-menu-close {
