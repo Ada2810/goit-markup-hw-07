@@ -14,23 +14,21 @@
   </head>
   <body class="container">
     <header>
-      <div class="header-left-side">
-        <a class="logo" href="index.html">
-          <span class="logo-web">Web</span
-          ><span class="logo-studio-black">Studio</span>
-        </a>
+      <a class="logo" href="index.html">
+        <span class="logo-web">Web</span
+        ><span class="logo-studio-black">Studio</span>
+      </a>
 
-        <nav>
-          <ul class="navigation">
-            <li><a href="index.html" class="nav-link">Studio</a></li>
-            <li>
-              <a href="portofolio.html" class="nav-link current">Portofolio</a>
-            </li>
-            <li><a href="contacts.html" class="nav-link">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="contacts">
+      <nav>
+        <ul class="navigation tablet">
+          <li><a href="index.html" class="nav-link">Studio</a></li>
+          <li>
+            <a href="portofolio.html" class="nav-link current">Portofolio</a>
+          </li>
+          <li><a href="contacts.html" class="nav-link">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="contacts tablet">
         <div class="contact-details">
           <svg class="contact-icon">
             <use href="./images/symbol-defs.svg#icon-envelope"></use>
@@ -48,6 +46,43 @@
           >
         </div>
       </div>
+
+      <button class="mobile-menu-button js-open-menu">
+        <svg class="mobile-menu-open">
+          <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
+        </svg>
+      </button>
+
+      <div class="menu-container js-menu-container">
+        <button class="mobile-menu-button js-close-menu">
+          <svg class="mobile-menu-close">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu">
+          <li><a href="index.html" class="mobile-link">Studio</a></li>
+          <li><a href="portofolio.html" class="mobile-link">Portofolio</a></li>
+          <li><a href="contact.html" class="mobile-link">Contacts</a></li>
+        </ul>
+        <div class="menu-contacts">
+          <a href="tel:+1212-772-4150" class="menu-contact-tel"
+            >+1 212-772-4150</a
+          >
+          <a href="mailto:info@devstudio.com" class="menu-contact-mail"
+            >info@devstudio.com</a
+          >
+        </div>
+
+        <div class="menu-social-links">
+          <a href="#instagram" class="menu-social-link-text">Instagram</a>
+          <span class="menu-vertical-dash"></span>
+          <a href="#twitter" class="menu-social-link-text">Twitter</a>
+          <span class="menu-vertical-dash"></span>
+          <a href="#facebook" class="menu-social-link-text">Facebook</a>
+          <span class="menu-vertical-dash"></span>
+          <a href="#linkedin" class="menu-social-link-text">LinkedIn</a>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -55,17 +90,39 @@
         <li><button type="button" class="filter-button">All</button></li>
         <li><button type="button" class="filter-button">Web-sites</button></li>
         <li><button type="button" class="filter-button">Apps</button></li>
+        <li class="break"></li>
         <li><button type="button" class="filter-button">Design</button></li>
         <li><button type="button" class="filter-button">Marketing</button></li>
       </ul>
       <ul class="projects-cards">
         <li class="projects">
           <div class="project-image">
-            <img
-              src="./images/technoduck-mobile@1x.png"
-              alt="technoduck project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/technoduck-desktop@1x.png 1x,
+                  ./images/technoduck-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/technoduck-tablet@1x.png 1x,
+                  ./images/technoduck-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/technoduck-mobile@1x.png 1x,
+                  ./images/technoduck-mobile@2x.png 2x
+                "
+              />
+              <img
+                src="./images/technoduck-mobile@1x.png"
+                alt="technoduck project"
+              />
+            </picture>
             <div class="project-image-overlay">
               <p>
                 Technoduck is a state-of-the-art coronavirus distribution
@@ -81,11 +138,30 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/poster-mobile@1x.png"
-              alt="poster project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/poster-desktop@1x.png 1x,
+                  ./images/poster-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/poster-tablet@1x.png 1x,
+                  ./images/poster-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/poster-mobile@1x.png 1x,
+                  ./images/poster-mobile@2x.png 2x
+                "
+              />
+              <img src="./images/poster-mobile@1x.png" alt="poster project" />
+            </picture>
+
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -102,11 +178,29 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/seafood-mobile@1x.png"
-              alt="seafood project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/seafood-desktop@1x.png 1x,
+                  ./images/seafood-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/seafood-tablet@1x.png 1x,
+                  ./images/seafood-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/seafood-mobile@1x.png 1x,
+                  ./images/seafood-mobile@2x.png 2x
+                "
+              />
+              <img src="./images/seafood-mobile@1x.png" alt="seafood project" />
+            </picture>
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -123,11 +217,32 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/project-prime-mobile@1x.png"
-              alt="project prime project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/project-prime-desktop@1x.png 1x,
+                  ./images/project-prime-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/project-prime-tablet@1x.png 1x,
+                  ./images/project-prime-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/project-prime-mobile@1x.png 1x,
+                  ./images/project-prime-mobile@2x.png 2x
+                "
+              />
+              <img
+                src="./images/project-prime-mobile@1x.png"
+                alt="project prime"
+              />
+            </picture>
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -144,11 +259,32 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/project-boxes-mobile@1x.png"
-              alt="project boxes project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/project-boxes-desktop@1x.png 1x,
+                  ./images/project-boxes-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/project-boxes-tablet@1x.png 1x,
+                  ./images/project-boxes-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/project-boxes-mobile@1x.png 1x,
+                  ./images/project-boxes-mobile@2x.png 2x
+                "
+              />
+              <img
+                src="./images/project-boxes-mobile@1x.png"
+                alt="project boxes"
+              />
+            </picture>
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -165,11 +301,32 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/inspiration-mobile@1x.png"
-              alt="inspiration has no borders project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/inspiration-desktop@1x.png 1x,
+                  ./images/inspiration-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/inspiration-tablet@1x.png 1x,
+                  ./images/inspiration-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/inspiration-mobile@1x.png 1x,
+                  ./images/inspiration-mobile@2x.png 2x
+                "
+              />
+              <img
+                src="./images/inspiration-mobile@1x.png"
+                alt="inspiration has no borders project"
+              />
+            </picture>
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -186,11 +343,32 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/limited-edition-mobile@1x.png"
-              alt="limited edition project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/limited-edition-desktop@1x.png 1x,
+                  ./images/limited-edition-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/limited-edition-tablet@1x.png 1x,
+                  ./images/limited-edition-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/limited-edition-mobile@1x.png 1x,
+                  ./images/limited-edition-mobile@2x.png 2x
+                "
+              />
+              <img
+                src="./images/limited-edition-mobile@1x.png"
+                alt="limited edition project"
+              />
+            </picture>
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -207,11 +385,29 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/project-lab-mobile@1x.png"
-              alt="project lab"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/project-lab-desktop@1x.png 1x,
+                  ./images/project-lab-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/project-lab-tablet@1x.png 1x,
+                  ./images/project-lab-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/project-lab-mobile@1x.png 1x,
+                  ./images/project-lab-mobile@2x.png 2x
+                "
+              />
+              <img src="./images/project-lab-mobile@1x.png" alt="project lab" />
+            </picture>
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -228,11 +424,33 @@
         </li>
         <li class="projects">
           <div class="project-image">
-            <img
-              src="images/growing-business-mobile@1x.png"
-              alt="growing business project"
-              width="370"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/growing-business-desktop@1x.png 1x,
+                  ./images/growing-business-desktop@2x.png 2x
+                "
+                media="(min-width: 1158px)"
+              />
+              <source
+                srcset="
+                  ./images/growing-business-tablet@1x.png 1x,
+                  ./images/growing-business-tablet@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/growing-business-mobile@1x.png 1x,
+                  ./images/growing-business-mobile@2x.png 2x
+                "
+              />
+              <img
+                src="./images/growing-business-mobile@1x.png"
+                alt="growing business project"
+              />
+            </picture>
+
             <div class="project-image-overlay">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -314,5 +532,13 @@
         </form>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
