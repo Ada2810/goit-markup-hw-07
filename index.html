@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="container">
+  <body>
     <header>
       <div class="header-left-side">
         <a class="logo" href="index.html">
@@ -25,14 +25,14 @@
         </a>
 
         <nav>
-          <ul class="navigation">
+          <ul class="navigation tablet">
             <li><a href="index.html" class="nav-link current">Studio</a></li>
             <li><a href="portofolio.html" class="nav-link">Portofolio</a></li>
             <li><a href="contacts.html" class="nav-link">Contacts</a></li>
           </ul>
         </nav>
   </div>
-      <div class="contacts">
+      <div class="contacts tablet">
         <div class="contact-details">
           <svg class="contact-icon">
             <use href="./images/symbol-defs.svg#icon-envelope"></use>
@@ -50,6 +50,43 @@
           >
         </div>
       </div>
+      
+      <button class="mobile-menu-button js-open-menu">
+      <svg class="mobile-menu-open">
+        <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
+      </svg>
+    </button>
+
+    <div class="menu-container js-menu-container">
+      <button class="mobile-menu-button js-close-menu">
+        <svg class="mobile-menu-close">
+        <use href="./images/symbol-defs.svg#icon-close"></use>
+      </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li><a href="index.html" class="mobile-link">Studio</a></li>
+        <li><a href="portofolio.html" class="mobile-link">Portofolio</a></li>
+        <li><a href="contact.html" class="mobile-link">Contacts</a></li>
+      </ul>
+      <div class="menu-contacts">
+          <a href="tel:+1212-772-4150" class="menu-contact-tel"
+            >+1 212-772-4150</a
+          >
+           <a href="mailto:info@devstudio.com" class="menu-contact-mail"
+            >info@devstudio.com</a
+          >
+      </div> 
+      
+      <div class="menu-social-links">
+      <a href="#instagram" class="menu-social-link-text">Instagram</a>
+      <span class="menu-vertical-dash"></span>
+      <a href="#twitter" class="menu-social-link-text">Twitter</a>
+      <span class="menu-vertical-dash"></span>
+      <a href="#facebook" class="menu-social-link-text">Facebook</a>
+      <span class="menu-vertical-dash"></span>
+      <a href="#linkedin" class="menu-social-link-text">LinkedIn</a>
+      </div>
+    </div>
     </header>
 
     <main>
@@ -172,8 +209,8 @@
           </li>
         </ul>
         <div>
-          <h2 class="h2-title">What we do</h2>
-          <ul class="what-we-do-images">
+          <h2 class="h2-title desktop">What we do</h2>
+          <ul class="what-we-do-images desktop">
             <li class="what-we-do-image">
               <img
                 src="./images/desktop-apps@1x.png"
@@ -209,11 +246,12 @@
         <h2 class="h2-title">Our team</h2>
         <ul class="team-members">
           <li class="team-member">
-            <img
-              src="./images/team-member-1-mobile@1x.jpg"
-              alt="Christopher Walker portrait photo"
-              width="270"
-            />
+          <picture class="team-member-image">
+          <source srcset="./images/team-member-1-desktop@1x.jpg 1x, ./images/team-member-1-desktop@2x.jpg 2x" media="(min-width: 1158px)"/>
+          <source srcset="./images/team-member-1-tablet@1x.jpg 1x, ./images/team-member-1-tablet@2x.jpg 2x" media="(min-width: 768px)"/>
+          <source srcset="./images/team-member-1-mobile@1x.jpg 1x, ./images/team-member-1-mobile@2x.jpg 2x"/>
+                    <img src="./images/team-member-1-mobile@1x.jpg" alt="Christopher Walker portrait photo"/>
+          </picture>
             <h3 class="team-member-name">Christopher Walker</h3>
             <p class="team-member-role">Product Designer</p>
             <div class="team-member-social-links">
@@ -240,11 +278,12 @@
             </div>
           </li>
           <li class="team-member">
-            <img
-              src="./images/team-member-2-mobile@1x.jpg"
-              alt="Kylie Evans portrait photo"
-              width="270"
-            />
+                <picture class="team-member-image">
+          <source srcset="./images/team-member-2-desktop@1x.jpg 1x, ./images/team-member-2-desktop@2x.jpg 2x" media="(min-width: 1158px)"/>
+          <source srcset="./images/team-member-2-tablet@1x.jpg 1x, ./images/team-member-2-tablet@2x.jpg 2x" media="(min-width: 768px)"/>
+          <source srcset="./images/team-member-2-mobile@1x.jpg 1x, ./images/team-member-2-mobile@2x.jpg 2x"/>
+                    <img src="./images/team-member-2-mobile@1x.jpg" alt="Kylie Evans portrait photo"/>
+          </picture>
             <h3 class="team-member-name">Kylie Evans</h3>
             <p class="team-member-role">Frontend Developer</p>
             <div class="team-member-social-links">
@@ -271,11 +310,12 @@
             </div>
           </li>
           <li class="team-member">
-            <img
-              src="./images/team-member-3-mobile@1x.jpg"
-              alt="Ryan Harris portrait photo"
-              width="270"
-            />
+            <picture class="team-member-image">
+          <source srcset="./images/team-member-3-desktop@1x.jpg 1x, ./images/team-member-3-desktop@2x.jpg 2x" media="(min-width: 1158px)"/>
+          <source srcset="./images/team-member-3-tablet@1x.jpg 1x, ./images/team-member-3-tablet@2x.jpg 2x" media="(min-width: 768px)"/>
+          <source srcset="./images/team-member-3-mobile@1x.jpg 1x, ./images/team-member-3-mobile@2x.jpg 2x"/>
+                    <img src="./images/team-member-3-mobile@1x.jpg" alt="Ryan Harris portrait photo"/>
+          </picture>
             <h3 class="team-member-name">Ryan Harris</h3>
             <p class="team-member-role">Marketing</p>
             <div class="team-member-social-links">
@@ -302,11 +342,12 @@
             </div>
           </li>
           <li class="team-member">
-            <img
-              src="./images/team-member-4-mobile@1x.jpg"
-              alt="Tyler Moore portrait photo"
-              width="270"
-            />
+                        <picture class="team-member-image">
+          <source srcset="./images/team-member-4-desktop@1x.jpg 1x, ./images/team-member-4-desktop@2x.jpg 2x" media="(min-width: 1158px)"/>
+          <source srcset="./images/team-member-4-tablet@1x.jpg 1x, ./images/team-member-4-tablet@2x.jpg 2x" media="(min-width: 768px)"/>
+          <source srcset="./images/team-member-4-mobile@1x.jpg 1x, ./images/team-member-4-mobile@2x.jpg 2x"/>
+                    <img src="./images/team-member-4-mobile@1x.jpg" alt="Tyler Moore portrait photo"/>
+          </picture>
             <h3 class="team-member-name">Tyler Moore</h3>
             <p class="team-member-role">UI Designer</p>
             <div class="team-member-social-links">
@@ -432,5 +473,12 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
