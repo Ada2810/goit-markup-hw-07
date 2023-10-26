@@ -127,19 +127,19 @@ header {
 
 .mobile-menu-button-close {
   position: absolute;
-      top: 10px;
-      right: 15px;
-        width: 40px;
-          height: 40px;
-          padding: 0px;
-          border: none;
-          background: none;
-          cursor: pointer;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .mobile-menu-close {
   width: 40px;
-    height: 40px;
+  height: 40px;
   padding: 11px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1090,17 +1090,23 @@ footer {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .intro {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url("../images/background-mobile@2x.png");
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background-mobile@2x.png");
   }
 }
 
 @media (min-width: 768px) {
   .intro {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url("../images/background-tablet@1x.png");
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background-tablet@1x.png");
   }
 
   .tablet {
@@ -1288,13 +1294,16 @@ footer {
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    @media (min-width: 768px) and (max-width: 1157px) {
-        .intro {
-            background-image: linear-gradient(to bottom,
-                rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)), url("../images/background-tablet@2x.png");
-          }
+  @media (min-width: 768px) and (max-width: 1157px) {
+    .intro {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/background-tablet@2x.png");
     }
+  }
 }
 
 @media (min-width: 1158px) {
@@ -1350,9 +1359,12 @@ footer {
   }
 
   .intro {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url("../images/background-desktop@1x.png");
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background-desktop@1x.png");
     height: 600px;
   }
 
@@ -1540,12 +1552,16 @@ footer {
 
 @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    @media (min-width: 1158px) {
-        .intro {
-            background-image: linear-gradient(to bottom,
-                rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)), url("../images/background-desktop@2x.png");
-          }
-        }
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  @media (min-width: 1158px) {
+    .intro {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/background-desktop@2x.png");
+    }
+  }
 }
