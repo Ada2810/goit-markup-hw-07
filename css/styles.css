@@ -114,9 +114,11 @@ header {
 .menu-container {
   display: none;
   background-color: white;
-  width: 480px;
-  height: 100vh;
+ width: 100%;
+ height: 100%;
   box-sizing: border-box;
+    padding: 48px 40px;
+      z-index: 10;
 }
 
 .is-open {
@@ -152,11 +154,6 @@ header {
 .mobile-menu-close:active {
   fill: var(--link-color);
   cursor: pointer;
-}
-
-.menu-container {
-  padding: 48px 40px;
-    z-index: 10;
 }
 
 .mobile-menu {
@@ -211,6 +208,7 @@ header {
   letter-spacing: 0.02em;
   text-align: left;
   color: var(--details-color);
+  text-wrap: wrap;
 }
 
 .menu-social-links {
@@ -218,6 +216,7 @@ header {
   bottom: 48px;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .menu-social-link-text {
@@ -260,8 +259,8 @@ header {
   letter-spacing: 0.06em;
   text-align: center;
   color: #ffffff;
-  width: 360px;
-  height: 84px;
+  width: 75%;
+  max-width: 360px;
 }
 
 .request-our-services {
@@ -293,22 +292,36 @@ header {
   justify-content: center;
   align-items: center;
   margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+        box-sizing: border-box;
 }
+
+                .h2-title {
+                  font-size: 28px;
+                  font-weight: 700;
+                  line-height: 33px;
+                  letter-spacing: 0.03em;
+                  text-align: center;
+                  margin: 0;
+                }
 
 .competitive-advantages {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   margin: 0;
 }
 
 .competitive-advantage {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
 }
 
 .competitive-advantage-svg-container {
-  width: 450px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
@@ -352,6 +365,9 @@ header {
   align-items: center;
   justify-content: center;
   gap: 30px;
+    padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box;
 }
 
 .team-members {
@@ -361,18 +377,20 @@ header {
   align-items: center;
   gap: 30px;
   margin: 0;
+  width: 100%;
 }
 
 .team-member {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
 }
 
-.team-member-image {
-  width: 450px;
+.team-member-image img {
+  width: 100%;
   display: block;
 }
 
@@ -444,6 +462,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
 }
 
 .regular-customers-logos-container {
@@ -453,6 +474,9 @@ header {
   align-items: center;
   gap: 30px;
   margin-top: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 680px;
 }
 
 .regular-customers-logo-container {
@@ -460,7 +484,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  width: 210px;
+  width: 100%;
+  max-width: 210px;
   height: 92px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
@@ -488,14 +513,17 @@ header {
 footer {
   background-color: var(--background-color);
   color: #ffffff;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 15px;
+}
+
+.footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    box-sizing: border-box;
+    padding: 0px;
 }
 
 .footer-left-side {
@@ -604,7 +632,7 @@ footer {
 
 .subscribe-mail-input {
   background: none;
-  width: 450px;
+  max-width: 450px;
   height: 50px;
   border: 1px solid #ffffff4d;
   border-radius: 4px;
@@ -671,27 +699,27 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  width: 450px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 450px;
   border-radius: 4px;
   padding: 40px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
 }
 
 .is-hidden {
@@ -726,27 +754,6 @@ footer {
 .close:focus,
 .close:active {
   fill: var(--link-color);
-}
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.close {
-  float: right;
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  margin: 8px;
-  background-image: url("../images/close.svg");
-  background-size: 11px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
-  cursor: pointer;
 }
 
 .contact-form {
@@ -943,6 +950,16 @@ footer {
 
 /*Portofolio Styles*/
 
+.portofolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
 .filters {
   display: flex;
   gap: 8px;
@@ -951,9 +968,9 @@ footer {
   flex-wrap: wrap;
   padding-top: 60px;
   padding-bottom: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0px;
+  max-width: 450px;
+  box-sizing: border-box;
 }
 
 .break {
@@ -994,13 +1011,12 @@ footer {
   justify-content: center;
   align-items: center;
   padding-bottom: 60px;
-  padding-right: 215px;
-  padding-left: 215px;
   margin: 0px;
 }
 
 .projects {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 404px;
   display: flex;
   flex-direction: column;
@@ -1021,8 +1037,9 @@ footer {
   display: block;
 }
 
-.project-image picture {
-  width: 450px;
+.project-image img {
+  width: 100%;
+  max-width: 450px;
   height: 294px;
   object-fit: cover;
 }
@@ -1104,6 +1121,11 @@ footer {
 }
 
 @media (min-width: 768px) {
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   .intro {
     background-image: linear-gradient(
         to bottom,
@@ -1213,14 +1235,24 @@ footer {
   .what-we-do {
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 100%;
+      max-width: 970px;
   }
+  
   .competitive-advantages {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .competitive-advantage {
-    width: 354px;
+    width: 100%;
+    max-width: 354px;
     height: 251px;
   }
 
@@ -1229,12 +1261,18 @@ footer {
   }
 
   .competitive-advantage-svg-container {
-    width: 354px;
+    width: 100%;
+    max-width: 354px;
+  }
+
+  .our-team {
+    width: 100%;
   }
 
   .team-members {
     flex-direction: row;
     flex-wrap: wrap;
+      max-width: 970px;
   }
 
   .team-member {
@@ -1246,16 +1284,23 @@ footer {
     display: block;
   }
 
+  .regular-customers-logos-container {
+    max-width: 970px;
+  }
   .regular-customers-logo-container {
-    width: 226px;
+    min-width: 226px;
   }
 
   footer {
+        padding-left: 20px;
+          padding-right: 20px;
+  }
+
+  .footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    height: 464px;
   }
 
   .footer-left-side {
@@ -1270,23 +1315,27 @@ footer {
     padding-top: 8px;
   }
 
+  .subscribe-mail-label input {
+       width: 450px;
+  }
+
   .filters {
     justify-content: center;
     padding-top: 60px;
     padding-bottom: 30px;
+    max-width: none;
   }
   .break {
     display: none;
   }
 
   .projects {
-    width: 354px;
+    max-width: 354px;
   }
 
   .projects-cards {
-    padding-left: 15px;
-    padding-right: 15px;
     justify-content: left;
+    max-width: 740px;
   }
 
   .projects-description {
@@ -1314,6 +1363,7 @@ footer {
   .desktop {
     display: block;
   }
+
   .intro,
   .what-we-do,
   .our-team,
@@ -1323,8 +1373,6 @@ footer {
   }
 
   header {
-    padding-left: 215px;
-    padding-right: 215px;
     align-items: center;
     justify-content: center;
   }
@@ -1336,7 +1384,7 @@ footer {
   .navigation {
     padding-top: 4px;
     padding-left: 93px;
-    padding-right: 340px;
+    padding-right: 200px;
   }
 
   .current::after {
@@ -1360,6 +1408,7 @@ footer {
     flex-direction: row;
     gap: 40px;
     align-items: flex-end;
+    justify-content: baseline;
   }
 
   .intro {
@@ -1375,14 +1424,17 @@ footer {
   .intro-title {
     font-size: 44px;
     line-height: 60px;
-    width: 696px;
+    max-width: 696px;
     height: 120px;
   }
 
   .what-we-do {
-    padding-left: 215px;
-    padding-right: 215px;
-    gap: 225px;
+    width: 100%;
+    min-width: 1158px;
+    gap: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .competitive-advantages {
@@ -1392,8 +1444,9 @@ footer {
   }
 
   .competitive-advantage {
-    width: 270px;
-    height: 120px;
+    width: 100%;
+    max-width: 270px;
+    /*max-height: 120px;*/
   }
 
   .competitive-advantages-title {
@@ -1401,7 +1454,7 @@ footer {
   }
 
   .competitive-advantage-svg-container {
-    width: 270px;
+    width: 100%;
   }
 
   .what-we-do div {
@@ -1414,17 +1467,19 @@ footer {
 
   .h2-title {
     font-size: 36px;
-    font-weight: 700;
     line-height: 42px;
-    letter-spacing: 0.03em;
-    text-align: center;
-    margin: 0;
   }
 
   .what-we-do-image {
     position: relative;
-    width: 370px;
-    height: 294px;
+    width: 100%;
+    max-width: 370px;
+    /*max-height: 294px;*/
+  }
+
+  .what-we-do-image img {
+      width: 100%;
+        max-width: 370px;
   }
 
   .what-we-do-images {
@@ -1447,7 +1502,8 @@ footer {
     letter-spacing: 0.03em;
     color: white;
     background-color: rgba(47, 48, 58, 0.8);
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     height: 70px;
     margin: 0;
     position: absolute;
@@ -1458,42 +1514,58 @@ footer {
   .our-team {
     gap: 50px;
   }
+
   .team-members {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    min-width: 1128px;
+    max-width: none;
   }
 
   .team-member {
-    width: 270px;
+    width: 25%;
+    max-width: 270px;
   }
 
   .team-member-image {
-    width: 270px;
+    width: 100%;
+    max-width: 270px;
   }
   .regular-customers {
+    width: 100%;
     gap: 50px;
   }
 
   .regular-customers-logos-container {
     margin: 0;
+    min-width: 1128px;
+    flex-wrap: nowrap;
+    max-width: none;
   }
+
   .regular-customers-logo-container {
-    width: 170px;
+    max-width: 170px;
+    min-width: 10%;
   }
 
   footer {
-    height: 251px;
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0px;
-    padding-left: 215px;
-    padding-right: 215px;
+    justify-content: center;
+  }
+
+  .footer {
+    display: flex;
+    height: 251px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 1158px;
   }
 
   .footer-left-side {
-    padding-right: 70px;
-    align-items: start;
+    align-items: flex-start;
+    padding-right: 0px;
   }
 
   .footer-contact-details {
@@ -1503,7 +1575,6 @@ footer {
 
   .find-us-on {
     padding-top: 12px;
-    padding-right: 93px;
   }
 
   .find-us-on h3 {
@@ -1522,11 +1593,11 @@ footer {
     flex-direction: row;
   }
   .subscribe-mail-input {
-    width: 358px;
+    max-width: 358px;
   }
 
   .modal-content {
-    width: 528px;
+    max-width: 528px;
     height: 581px;
   }
 
@@ -1540,12 +1611,11 @@ footer {
   }
 
   .projects {
-    width: 370px;
+    min-width: 370px;
   }
 
   .projects-cards {
-    padding-left: 215px;
-    padding-right: 215px;
+    max-width: 1170px;
     justify-content: center;
   }
 
