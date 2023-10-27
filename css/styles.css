@@ -271,7 +271,7 @@ header {
   text-align: center;
   background-color: var(--link-color);
   border: none;
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   color: #ffffff;
   cursor: pointer;
